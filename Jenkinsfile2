@@ -1,0 +1,12 @@
+pipeline {
+agent { label 'vs2017' }
+
+stages {
+stage('Tagging') {
+steps {
+withCredentials([usernamePassword(credentialsId: 'repo_auth', passwordVariable: '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', usernameVariable: 'sofisoftfix')]) {
+  bat "git push https://sofisoftfix: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@github.com/sofisoftfix/JavaHelloWorld.git"
+}
+}
+}
+}
