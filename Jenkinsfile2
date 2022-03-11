@@ -5,7 +5,7 @@ pipeline {
         steps {
             withCredentials([usernamePassword(credentialsId: 'repo_auth', passwordVariable: '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', usernameVariable: 'sofisoftfix')]) 
             {
-            bat "git push https://sofisoftfix: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@github.com/sofisoftfix/JavaHelloWorld.git"
+            bat "git push https://sofisoftfix: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@github.com/sofisoftfix/JavaHelloWorld.git"
             }
         }
     }
