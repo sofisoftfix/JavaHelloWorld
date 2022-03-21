@@ -11,9 +11,9 @@ pipeline {
                 echo 'deployin application.............'
 				// get code from repository
 				withCredentials([
-                    usernamepassword(credentials: 'server-credentials', usernameVariable:USER, passwordVariable:PWD)
+                    usernamepassword(credentials: 'server-credentials', usernameVariable:'server-user', passwordVariable:'Dncnm123456')
                 ]){
-                    bat "some scripts ${USER} ${PWD}"
+                    bat "some scripts"
                 }
 				}
 			}
