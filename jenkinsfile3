@@ -11,10 +11,10 @@ pipeline {
 				// get code from repository
 				//withCredentials([usernamePassword(credentialsId:'server-credentials', usernameVariable:'server-user', passwordVariable:'Dncnm123456')])
                                 //withCredentials([usernamePassword(credentialsId:'gitcredentials', usernameVariable:'mariasoft@gmail.com', passwordVariable:'Dncnm123456')])
-				withCredentials([usernamePassword(credentialsId:$SERVER_CREDENTIALS, usernameVariable:'server-user', passwordVariable:'Dncnm123456')])
-				{
-                    			echo "some scripts"
-                		}
+				//withCredentials([usernamePassword(credentialsId:$SERVER_CREDENTIALS, usernameVariable:'server-user', passwordVariable:'Dncnm123456')])
+				//{
+                    			bat "echo 'some scripts $SERVER_CREDENTIALS'"
+                		//}
 			}
 		}
 	}
