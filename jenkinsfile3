@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	environment { 
         	NEW_VERSION='1.3.0'
-        	SERVER_CREDENTIALS= credentials('server-credentials')
+        	SERVER_CREDENTIALS= credentials('gitcredentials')
     	}
 	stages {
 		stage("Build") {
@@ -11,7 +11,7 @@ pipeline {
 				// get code from repository
 				//withCredentials([usernamePassword(credentialsId:'server-credentials', usernameVariable:'server-user', passwordVariable:'Dncnm123456')])
                                 //withCredentials([usernamePassword(credentialsId:'gitcredentials', usernameVariable:'mariasoft@gmail.com', passwordVariable:'Dncnm123456')])
-				withCredentials([usernamePassword(credentialsId:$SERVER_CREDENTIALS, usernameVariable:$SERVER_CREDENTIALS_USR, passwordVariable:$SERVER_CREDENTIALS_PSW)])
+				withCredentials([usernamePassword(credentialsId:$SERVER_CREDENTIALS, usernameVariable:'server-user', passwordVariable:'Dncnm123456')])
 				{
                     			echo "some scripts"
                 		}
