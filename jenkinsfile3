@@ -10,7 +10,8 @@ pipeline {
 			steps {
                 echo 'deployin application.............'
 				// get code from repository
-				withCredentials([usernamePassword(credentialsId:'server-credentials', usernameVariable:'server-user', passwordVariable:'Dncnm123456')])
+				//withCredentials([usernamePassword(credentialsId:'server-credentials', usernameVariable:'server-user', passwordVariable:'Dncnm123456')])
+                                withCredentials([usernamePassword(credentialsId:'My Github credentials', usernameVariable:'mariasoft@gmail.com', passwordVariable:'Dncnm123456')])
 				{
                     			echo "some scripts"
                 		}
